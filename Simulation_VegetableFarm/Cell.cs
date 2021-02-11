@@ -14,28 +14,28 @@ namespace Simulation_VegetableFarm
         private const Int32 YELLOW_PROGRESS = 38;
         private const Int32 RED_PROGRESS = 50;
 
-        private Int32 progress { get; set; } = 0;
-        public CellState state
+        private Int32 Progress { get; set; } = 0;
+        public CellState State
         {
             get
             {
-                if (progress == 0)
+                if (Progress == 0)
                 {
                     return CellState.Empty;
                 }
-                else if (progress < GROWING_PROGRESS)
+                else if (Progress < GROWING_PROGRESS)
                 {
                     return CellState.Growing;
                 }
-                else if (progress < GREEN_PROGRESS)
+                else if (Progress < GREEN_PROGRESS)
                 {
                     return CellState.Green;
                 }
-                else if (progress < YELLOW_PROGRESS)
+                else if (Progress < YELLOW_PROGRESS)
                 {
                     return CellState.Yellow;
                 }
-                else if (progress < RED_PROGRESS)
+                else if (Progress < RED_PROGRESS)
                 {
                     return CellState.Red;
                 }
@@ -48,19 +48,19 @@ namespace Simulation_VegetableFarm
 
         internal void StartGrow()
         {
-            progress++;
+            Progress++;
         }
 
         internal void Cut()
         {
-            progress = 0;
+            Progress = 0;
         }
 
         internal void Step()
         {
-            if (state != CellState.Overgrow && state != CellState.Empty)
+            if (State != CellState.Overgrow && State != CellState.Empty)
             {
-                progress++;
+                Progress++;
             }
         }
     }

@@ -22,10 +22,9 @@ namespace Simulation_VegetableFarm
 
         private Int32 day = 0;
         private Int32 money = 100;
+        private Int32 speed;
 
-        private Dictionary<CheckBox, Cell> field = new Dictionary<CheckBox, Cell>();
-        private int speed;
-        
+        private readonly Dictionary<CheckBox, Cell> field = new Dictionary<CheckBox, Cell>();
 
         public Form1()
         {
@@ -80,7 +79,7 @@ namespace Simulation_VegetableFarm
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = (sender as CheckBox);
-            Int32 price = GetPrice(field[cb].state);
+            Int32 price = GetPrice(field[cb].State);
             if (money + price < 0)
             {
                 return;
@@ -111,7 +110,7 @@ namespace Simulation_VegetableFarm
         private void UpdateBox(CheckBox cb)
         {
             Color color = Color.White;
-            switch (field[cb].state)
+            switch (field[cb].State)
             {
                 case CellState.Growing:
                     color = Color.Black;
@@ -160,15 +159,10 @@ namespace Simulation_VegetableFarm
             }
 
             day++;
-            this.labDay.Text = $"Day: {day}";
-            this.labMoney.Text = $"Money: {money}";
+            labDay.Text = $"Day: {day}";
+            labMoney.Text = $"Money: {money}";
 
             pbDay.Value = 0;
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)

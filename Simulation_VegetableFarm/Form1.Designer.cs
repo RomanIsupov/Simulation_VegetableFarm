@@ -279,17 +279,17 @@ namespace Simulation_VegetableFarm
             // labSpeed
             // 
             this.labSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labSpeed.Location = new System.Drawing.Point(654, 9);
+            this.labSpeed.Location = new System.Drawing.Point(642, 9);
             this.labSpeed.Name = "labSpeed";
-            this.labSpeed.Size = new System.Drawing.Size(134, 41);
+            this.labSpeed.Size = new System.Drawing.Size(146, 41);
             this.labSpeed.TabIndex = 3;
-            this.labSpeed.Text = "Speed";
+            this.labSpeed.Text = "ms in 1 step";
             this.labSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numSpeed
             // 
             this.numSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numSpeed.Location = new System.Drawing.Point(659, 56);
+            this.numSpeed.Location = new System.Drawing.Point(647, 56);
             this.numSpeed.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -301,7 +301,7 @@ namespace Simulation_VegetableFarm
             0,
             0});
             this.numSpeed.Name = "numSpeed";
-            this.numSpeed.Size = new System.Drawing.Size(120, 35);
+            this.numSpeed.Size = new System.Drawing.Size(132, 35);
             this.numSpeed.TabIndex = 4;
             this.numSpeed.Value = new decimal(new int[] {
             1000,
@@ -317,7 +317,6 @@ namespace Simulation_VegetableFarm
             this.pbDay.Size = new System.Drawing.Size(394, 35);
             this.pbDay.Step = 100;
             this.pbDay.TabIndex = 5;
-            this.pbDay.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // timer2
             // 

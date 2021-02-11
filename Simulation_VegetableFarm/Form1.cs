@@ -24,6 +24,8 @@ namespace Simulation_VegetableFarm
         private Int32 money = 100;
 
         private Dictionary<CheckBox, Cell> field = new Dictionary<CheckBox, Cell>();
+        private int speed;
+        
 
         public Form1()
         {
@@ -33,6 +35,11 @@ namespace Simulation_VegetableFarm
             {
                 field.Add(cb, new Cell());
             }
+
+            speed = (int)this.numSpeed.Value;
+            this.pbDay.Value = 0;
+            this.pbDay.Maximum = this.timer1.Interval;
+            this.pbDay.Step = (int)speed / 10;
 
             if (!timer1.Enabled)
             {
@@ -132,6 +139,14 @@ namespace Simulation_VegetableFarm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            this.pbDay.Value = 0;
+            speed = (int)this.numSpeed.Value;
+            timer1.Interval = speed;
+            
+            this.pbDay.Maximum = speed;
+            this.pbDay.Step = speed / 10;
+            
+
             foreach (CheckBox cb in tableLayoutPanel1.Controls)
             {
                 field[cb].Step();
@@ -140,6 +155,20 @@ namespace Simulation_VegetableFarm
             day++;
             this.labDay.Text = $"Day: {day}";
             this.labMoney.Text = $"Money: {money}";
+
+
+
+
+            //this.pbDay.Value = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                this.pbDay.PerformStep();
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

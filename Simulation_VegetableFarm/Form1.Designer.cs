@@ -50,7 +50,11 @@ namespace Simulation_VegetableFarm
             this.labDay = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labMoney = new System.Windows.Forms.Label();
+            this.labSpeed = new System.Windows.Forms.Label();
+            this.numSpeed = new System.Windows.Forms.NumericUpDown();
+            this.pbDay = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -258,7 +262,7 @@ namespace Simulation_VegetableFarm
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // labMoney
@@ -271,17 +275,64 @@ namespace Simulation_VegetableFarm
             this.labMoney.Text = "Money: 100";
             this.labMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // labSpeed
+            // 
+            this.labSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labSpeed.Location = new System.Drawing.Point(654, 9);
+            this.labSpeed.Name = "labSpeed";
+            this.labSpeed.Size = new System.Drawing.Size(134, 41);
+            this.labSpeed.TabIndex = 3;
+            this.labSpeed.Text = "Speed";
+            this.labSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numSpeed
+            // 
+            this.numSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numSpeed.Location = new System.Drawing.Point(659, 56);
+            this.numSpeed.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numSpeed.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numSpeed.Name = "numSpeed";
+            this.numSpeed.Size = new System.Drawing.Size(120, 35);
+            this.numSpeed.TabIndex = 4;
+            this.numSpeed.Value = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            // 
+            // pbDay
+            // 
+            this.pbDay.Location = new System.Drawing.Point(203, 56);
+            this.pbDay.Maximum = 500;
+            this.pbDay.Name = "pbDay";
+            this.pbDay.Size = new System.Drawing.Size(394, 35);
+            this.pbDay.Step = 500;
+            this.pbDay.TabIndex = 5;
+            this.pbDay.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 720);
+            this.Controls.Add(this.pbDay);
+            this.Controls.Add(this.numSpeed);
+            this.Controls.Add(this.labSpeed);
             this.Controls.Add(this.labMoney);
             this.Controls.Add(this.labDay);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +359,9 @@ namespace Simulation_VegetableFarm
         private System.Windows.Forms.Label labDay;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labMoney;
+        private System.Windows.Forms.Label labSpeed;
+        private System.Windows.Forms.NumericUpDown numSpeed;
+        private System.Windows.Forms.ProgressBar pbDay;
     }
 }
 

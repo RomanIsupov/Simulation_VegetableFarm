@@ -29,6 +29,7 @@ namespace Simulation_VegetableFarm
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -43,13 +44,13 @@ namespace Simulation_VegetableFarm
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.labDay = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,8 +94,8 @@ namespace Simulation_VegetableFarm
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(194, 144);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -103,8 +104,8 @@ namespace Simulation_VegetableFarm
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(194, 144);
             this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -113,8 +114,8 @@ namespace Simulation_VegetableFarm
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(194, 144);
             this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -123,8 +124,8 @@ namespace Simulation_VegetableFarm
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(194, 144);
             this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -133,8 +134,8 @@ namespace Simulation_VegetableFarm
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(194, 144);
             this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -143,8 +144,8 @@ namespace Simulation_VegetableFarm
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(194, 144);
             this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -153,8 +154,8 @@ namespace Simulation_VegetableFarm
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(194, 144);
             this.checkBox7.TabIndex = 6;
-            this.checkBox7.Text = "";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox8
             // 
@@ -163,8 +164,8 @@ namespace Simulation_VegetableFarm
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(194, 144);
             this.checkBox8.TabIndex = 7;
-            this.checkBox8.Text = "";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox9
             // 
@@ -173,8 +174,8 @@ namespace Simulation_VegetableFarm
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(194, 144);
             this.checkBox9.TabIndex = 8;
-            this.checkBox9.Text = "";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox10
             // 
@@ -183,8 +184,8 @@ namespace Simulation_VegetableFarm
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(194, 144);
             this.checkBox10.TabIndex = 9;
-            this.checkBox10.Text = "";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox11
             // 
@@ -193,8 +194,8 @@ namespace Simulation_VegetableFarm
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(194, 144);
             this.checkBox11.TabIndex = 10;
-            this.checkBox11.Text = "";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox12
             // 
@@ -203,8 +204,8 @@ namespace Simulation_VegetableFarm
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(194, 144);
             this.checkBox12.TabIndex = 11;
-            this.checkBox12.Text = "";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -213,18 +214,8 @@ namespace Simulation_VegetableFarm
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(194, 144);
             this.checkBox13.TabIndex = 12;
-            this.checkBox13.Text = "";
             this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox14.Location = new System.Drawing.Point(203, 453);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(194, 144);
-            this.checkBox14.TabIndex = 13;
-            this.checkBox14.Text = "";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox15
             // 
@@ -233,8 +224,8 @@ namespace Simulation_VegetableFarm
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(194, 144);
             this.checkBox15.TabIndex = 14;
-            this.checkBox15.Text = "";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -243,17 +234,28 @@ namespace Simulation_VegetableFarm
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(194, 144);
             this.checkBox16.TabIndex = 15;
-            this.checkBox16.Text = "";
             this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // label1
+            // checkBox14
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.checkBox14.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox14.Location = new System.Drawing.Point(203, 453);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(194, 144);
+            this.checkBox14.TabIndex = 13;
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // labDay
+            // 
+            this.labDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labDay.Location = new System.Drawing.Point(654, 9);
+            this.labDay.Name = "labDay";
+            this.labDay.Size = new System.Drawing.Size(134, 41);
+            this.labDay.TabIndex = 1;
+            this.labDay.Text = "Day: 0";
+            this.labDay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -264,13 +266,6 @@ namespace Simulation_VegetableFarm
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(16, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(203, 39);
@@ -278,15 +273,19 @@ namespace Simulation_VegetableFarm
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 4;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 720);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labDay);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -315,10 +314,10 @@ namespace Simulation_VegetableFarm
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labDay;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

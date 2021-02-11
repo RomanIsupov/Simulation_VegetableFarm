@@ -53,6 +53,7 @@ namespace Simulation_VegetableFarm
             this.labSpeed = new System.Windows.Forms.Label();
             this.numSpeed = new System.Windows.Forms.NumericUpDown();
             this.pbDay = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
             this.SuspendLayout();
@@ -303,20 +304,25 @@ namespace Simulation_VegetableFarm
             this.numSpeed.Size = new System.Drawing.Size(120, 35);
             this.numSpeed.TabIndex = 4;
             this.numSpeed.Value = new decimal(new int[] {
-            500,
+            1000,
             0,
             0,
             0});
             // 
             // pbDay
             // 
-            this.pbDay.Location = new System.Drawing.Point(203, 56);
+            this.pbDay.Location = new System.Drawing.Point(203, 15);
             this.pbDay.Maximum = 500;
             this.pbDay.Name = "pbDay";
             this.pbDay.Size = new System.Drawing.Size(394, 35);
-            this.pbDay.Step = 500;
+            this.pbDay.Step = 100;
             this.pbDay.TabIndex = 5;
             this.pbDay.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 50;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -362,6 +368,7 @@ namespace Simulation_VegetableFarm
         private System.Windows.Forms.Label labSpeed;
         private System.Windows.Forms.NumericUpDown numSpeed;
         private System.Windows.Forms.ProgressBar pbDay;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

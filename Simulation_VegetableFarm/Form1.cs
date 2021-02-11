@@ -36,14 +36,17 @@ namespace Simulation_VegetableFarm
                 field.Add(cb, new Cell());
             }
 
-            speed = (int)this.numSpeed.Value;
-            this.pbDay.Value = 0;
-            this.pbDay.Maximum = this.timer1.Interval;
-            this.pbDay.Step = (int)speed / 10;
-
+            speed = (int)numSpeed.Value;
+            timer2.Interval = speed / 12;
+            timer1.Interval = speed;
+            
             if (!timer1.Enabled)
             {
                 timer1.Start();
+            }
+            if (!timer2.Enabled)
+            {
+                timer2.Start();
             }
         }
 
@@ -139,36 +142,38 @@ namespace Simulation_VegetableFarm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.pbDay.Value = 0;
-            speed = (int)this.numSpeed.Value;
+            speed = (int)numSpeed.Value;
             timer1.Interval = speed;
-            
-            this.pbDay.Maximum = speed;
-            this.pbDay.Step = speed / 10;
-            
+            if (speed < 5000)
+            {
+                timer2.Interval = speed / 12;
+            }
+            else
+            {
+                timer2.Interval = speed / 6;
+            }
 
             foreach (CheckBox cb in tableLayoutPanel1.Controls)
             {
                 field[cb].Step();
                 UpdateBox(cb);
             }
+
             day++;
             this.labDay.Text = $"Day: {day}";
             this.labMoney.Text = $"Money: {money}";
 
-
-
-
-            //this.pbDay.Value = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                this.pbDay.PerformStep();
-            }
+            pbDay.Value = 0;
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            pbDay.PerformStep();
         }
     }
 }

@@ -48,9 +48,8 @@ namespace Simulation_VegetableFarm
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.labDay = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labMoney = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,48 +249,40 @@ namespace Simulation_VegetableFarm
             // labDay
             // 
             this.labDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labDay.Location = new System.Drawing.Point(654, 9);
+            this.labDay.Location = new System.Drawing.Point(12, 9);
             this.labDay.Name = "labDay";
             this.labDay.Size = new System.Drawing.Size(134, 41);
             this.labDay.TabIndex = 1;
             this.labDay.Text = "Day: 0";
             this.labDay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(203, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // labMoney
+            // 
+            this.labMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labMoney.Location = new System.Drawing.Point(12, 50);
+            this.labMoney.Name = "labMoney";
+            this.labMoney.Size = new System.Drawing.Size(185, 41);
+            this.labMoney.TabIndex = 2;
+            this.labMoney.Text = "Money: 100";
+            this.labMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 720);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labMoney);
             this.Controls.Add(this.labDay);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -315,9 +306,8 @@ namespace Simulation_VegetableFarm
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.Label labDay;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labMoney;
     }
 }
 

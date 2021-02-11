@@ -8,10 +8,11 @@ namespace Simulation_VegetableFarm
 {
     public class Cell
     {
-        private const Int32 GROWING_PROGRESS = 20;
-        private const Int32 GREEN_PROGRESS = 60;
-        private const Int32 YELLOW_PROGRESS = 80;
-        private const Int32 RED_PROGRESS = 100;
+        // Moments of time when the field changes their state 
+        private const Int32 GROWING_PROGRESS = 10;
+        private const Int32 GREEN_PROGRESS = 25;
+        private const Int32 YELLOW_PROGRESS = 38;
+        private const Int32 RED_PROGRESS = 50;
 
         private Int32 progress { get; set; } = 0;
         public CellState state
